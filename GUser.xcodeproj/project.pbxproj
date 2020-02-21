@@ -49,6 +49,7 @@
 		EEE8B54023FF92EB001DD3B5 /* GUserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GUserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE8B54423FF92EB001DD3B5 /* GUserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GUserUITests.swift; sourceTree = "<group>"; };
 		EEE8B54623FF92EB001DD3B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEE8B55223FF979F001DD3B5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +80,7 @@
 		EEE8B51623FF92E8001DD3B5 = {
 			isa = PBXGroup;
 			children = (
+				EEE8B55223FF979F001DD3B5 /* README.md */,
 				EEE8B52123FF92E8001DD3B5 /* GUser */,
 				EEE8B53823FF92EB001DD3B5 /* GUserTests */,
 				EEE8B54323FF92EB001DD3B5 /* GUserUITests */,
