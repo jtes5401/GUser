@@ -10,9 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let viewModel = ViewControllerModel(userDataSize: 100, loadSize: 20)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        viewModel.onLoading = onLoading(isFinish:)
+        viewModel.onNewData = onNewData
+    }
+    
+    func onLoading(isFinish:Bool) {
+        
+    }
+    
+    func onNewData() {
+        
     }
 
 
