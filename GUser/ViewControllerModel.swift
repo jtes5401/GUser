@@ -9,5 +9,17 @@
 import Foundation
 
 class ViewControllerModel {
+    public var userData = [GHUser]()
+    
+    public var onLoading:((_ isFinish:Bool) -> Void)?
+    public var onNewData:(()->Void)?
+    
+    private var userDataSize = 20
+    private var loadSize = 20
+
+    init(userDataSize:Int, loadSize:Int) {
+        self.userDataSize = userDataSize
+        self.loadSize = loadSize
+    }
     
 }
