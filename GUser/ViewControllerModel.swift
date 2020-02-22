@@ -22,4 +22,34 @@ class ViewControllerModel {
         self.loadSize = loadSize
     }
     
+    public func getMoreData() {
+        self.onLoading?(false)
+
+        if userData.count >= userDataSize {
+            self.onLoading?(true)
+            return
+        }
+        
+        var beginId = 0
+        
+        if let lastUser = userData.last {
+            beginId = lastUser.id
+        }
+        
+        let conn = GHConnecter()
+        conn.requestUsers(since: beginId, size: loadSize) { [unowned self] (users, result)  in
+            self.onLoading?(true)
+            if result,let us = users {
+                self.userData.append(contentsOf: us)
+                self.sortingUserData()
+                self.onNewData?()
+            }
+        }
+    }
+    
+    private func sortingUserData() {
+        userData.sort { (u1, u2) -> Bool in
+            return u1.id < u2.id
+        }
+    }
 }
