@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import UIKit
 
 class ViewControllerModel {
     public var userData = [GHUser]()
     
+    public var userPicDic = [Int:UIImage]()
     public var onLoading:((_ isFinish:Bool) -> Void)?
     public var onNewData:(()->Void)?
     
@@ -42,8 +44,27 @@ class ViewControllerModel {
             if result,let us = users {
                 self.userData.append(contentsOf: us)
                 self.sortingUserData()
+                self.getUserPic()
                 self.onNewData?()
             }
+        }
+    }
+    
+    public func getUserPic() {
+        let session = URLSession(configuration: .default)
+        let flag = DispatchSemaphore(value: 0)
+        for user in userData where userPicDic[user.id] == nil {
+            session.dataTask(with: user.picURL) {[unowned self] (data, resp, err) in
+                if let e = err {
+                    print("getUserPic:", e)
+                    return
+                }
+                if let d = data,let im = UIImage(data: d) {
+                    self.userPicDic[user.id] = im
+                }
+                flag.signal()
+            }.resume()
+            flag.wait()
         }
     }
     
