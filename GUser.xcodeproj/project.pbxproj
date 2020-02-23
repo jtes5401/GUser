@@ -11,6 +11,7 @@
 		EE491B7124002A750009EA18 /* TypeDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE491B7024002A750009EA18 /* TypeDefine.swift */; };
 		EE491B732401237A0009EA18 /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE491B722401237A0009EA18 /* ViewControllerModel.swift */; };
 		EECFC9E92402C6CB00F8CDD5 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = EECFC9E82402C6CB00F8CDD5 /* JGProgressHUD */; };
+		EECFC9EB2402F49100F8CDD5 /* readMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = EECFC9EA2402F49100F8CDD5 /* readMe.txt */; };
 		EEDFC96224019F34000A1D86 /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDFC96124019F34000A1D86 /* ViewCell.swift */; };
 		EEE8B52323FF92E8001DD3B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8B52223FF92E8001DD3B5 /* AppDelegate.swift */; };
 		EEE8B52523FF92E8001DD3B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8B52423FF92E8001DD3B5 /* SceneDelegate.swift */; };
@@ -43,6 +44,7 @@
 		EE491B6E240022950009EA18 /* GHConnecter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHConnecter.swift; sourceTree = "<group>"; };
 		EE491B7024002A750009EA18 /* TypeDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeDefine.swift; sourceTree = "<group>"; };
 		EE491B722401237A0009EA18 /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
+		EECFC9EA2402F49100F8CDD5 /* readMe.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = readMe.txt; sourceTree = "<group>"; };
 		EEDFC96124019F34000A1D86 /* ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
 		EEE8B51F23FF92E8001DD3B5 /* GUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE8B52223FF92E8001DD3B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		EEE8B51623FF92E8001DD3B5 = {
 			isa = PBXGroup;
 			children = (
+				EECFC9EA2402F49100F8CDD5 /* readMe.txt */,
 				EEE8B55223FF979F001DD3B5 /* README.md */,
 				EEE8B52123FF92E8001DD3B5 /* GUser */,
 				EEE8B53823FF92EB001DD3B5 /* GUserTests */,
@@ -256,6 +259,7 @@
 			files = (
 				EEE8B52F23FF92EB001DD3B5 /* LaunchScreen.storyboard in Resources */,
 				EEE8B52C23FF92EB001DD3B5 /* Assets.xcassets in Resources */,
+				EECFC9EB2402F49100F8CDD5 /* readMe.txt in Resources */,
 				EEE8B52A23FF92E8001DD3B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
