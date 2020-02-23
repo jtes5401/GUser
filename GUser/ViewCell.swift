@@ -14,12 +14,16 @@ class ViewCell: UITableViewCell {
     @IBOutlet var picImageView:UIImageView!
     @IBOutlet var starImageView:UIImageView!
     
+    override func willMove(toSuperview newSuperview: UIView?) {
+        super.willMove(toSuperview: newSuperview)
+        let size = picImageView.frame.size
+        picImageView.layer.cornerRadius = size.height / 2
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         nameLabel.text = ""
         picImageView.image = nil
-        let size = picImageView.frame.size
-        picImageView.layer.cornerRadius = size.height / 2
         starImageView.isHidden = true
     }
 }
