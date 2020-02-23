@@ -19,6 +19,8 @@ class ViewControllerModel {
     private var userDataSize = 20
     private var loadSize = 20
 
+    private var updateFlag = DispatchSemaphore(value: 1)
+    
     init(userDataSize:Int, loadSize:Int) {
         self.userDataSize = userDataSize
         self.loadSize = loadSize
@@ -27,8 +29,10 @@ class ViewControllerModel {
     public func getMoreData() {
         self.onLoading?(false)
 
+        updateFlag.wait()
         if userData.count >= userDataSize {
             self.onLoading?(true)
+            updateFlag.signal()
             return
         }
         
@@ -47,6 +51,7 @@ class ViewControllerModel {
                 self.getUserPic()
                 self.onNewData?()
             }
+            self.updateFlag.signal()
         }
     }
     

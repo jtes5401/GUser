@@ -54,3 +54,11 @@ extension ViewController : UITableViewDataSource {
 
 }
 
+extension ViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row >= viewModel.userData.count - 1 {
+            print("willDisplay:", indexPath)
+            viewModel.getMoreData()
+        }
+    }
+}
