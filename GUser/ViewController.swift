@@ -21,12 +21,19 @@ class ViewController: UIViewController {
         viewModel.onNewData = onNewData
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.getMoreData()
+    }
+    
     func onLoading(isFinish:Bool) {
         
     }
     
     func onNewData() {
-        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
 extension ViewController : UITableViewDataSource {
