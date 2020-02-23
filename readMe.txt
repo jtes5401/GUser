@@ -15,7 +15,7 @@ This app have three main part
     - ViewControllerModel - logic and ui state
     - GHConnecter - Github api encapsulation
 
-Using MVVM and Closure to response 
+Using MVVM and Closure to response
 
 ## Thrid-Party Library
 
