@@ -27,14 +27,12 @@ class ViewControllerModel {
     }
     
     public func getMoreData() {
-        self.onLoading?(false)
-
         updateFlag.wait()
         if userData.count >= userDataSize {
-            self.onLoading?(true)
             updateFlag.signal()
             return
         }
+        self.onLoading?(false)
         
         var beginId = 0
         
@@ -44,13 +42,13 @@ class ViewControllerModel {
         
         let conn = GHConnecter()
         conn.requestUsers(since: beginId, size: loadSize) { [unowned self] (users, result)  in
-            self.onLoading?(true)
             if result,let us = users {
                 self.userData.append(contentsOf: us)
                 self.sortingUserData()
                 self.getUserPic()
                 self.onNewData?()
             }
+            self.onLoading?(true)
             self.updateFlag.signal()
         }
     }

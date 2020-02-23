@@ -7,18 +7,22 @@
 //
 
 import UIKit
+import JGProgressHUD
 
 class ViewController: UIViewController {
     
     @IBOutlet var tableView:UITableView!
 
     let viewModel = ViewControllerModel(userDataSize: 100, loadSize: 20)
+    let progressView = JGProgressHUD(style: .dark)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         viewModel.onLoading = onLoading(isFinish:)
         viewModel.onNewData = onNewData
+        
+        progressView.textLabel.text = "Downloading"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,7 +31,13 @@ class ViewController: UIViewController {
     }
     
     func onLoading(isFinish:Bool) {
-        
+        DispatchQueue.main.async {
+            if isFinish {
+                self.progressView.dismiss(animated: true)
+            }else{
+                self.progressView.show(in: self.view)
+            }
+        }
     }
     
     func onNewData() {
@@ -36,6 +46,7 @@ class ViewController: UIViewController {
         }
     }
 }
+
 extension ViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.userData.count
