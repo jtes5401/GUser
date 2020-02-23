@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var tableView:UITableView!
 
     let viewModel = ViewControllerModel(userDataSize: 100, loadSize: 20)
 
