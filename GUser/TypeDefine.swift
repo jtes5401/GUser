@@ -36,11 +36,13 @@ struct GHUser : Decodable {
     var name:String
     var isAdmin:Bool
     var picURL:URL
+    var id:Int
 
     enum CodingKeys: String, CodingKey {
         case name =  "login"
         case isAdmin =  "site_admin"
         case picURL =  "avatar_url"
+        case id = "id"
     }
     
 }

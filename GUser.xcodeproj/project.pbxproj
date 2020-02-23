@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		EE491B6F240022950009EA18 /* GHConnecter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE491B6E240022950009EA18 /* GHConnecter.swift */; };
 		EE491B7124002A750009EA18 /* TypeDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE491B7024002A750009EA18 /* TypeDefine.swift */; };
+		EE491B732401237A0009EA18 /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE491B722401237A0009EA18 /* ViewControllerModel.swift */; };
+		EECFC9E92402C6CB00F8CDD5 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = EECFC9E82402C6CB00F8CDD5 /* JGProgressHUD */; };
+		EEDFC96224019F34000A1D86 /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDFC96124019F34000A1D86 /* ViewCell.swift */; };
 		EEE8B52323FF92E8001DD3B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8B52223FF92E8001DD3B5 /* AppDelegate.swift */; };
 		EEE8B52523FF92E8001DD3B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8B52423FF92E8001DD3B5 /* SceneDelegate.swift */; };
 		EEE8B52723FF92E8001DD3B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE8B52623FF92E8001DD3B5 /* ViewController.swift */; };
@@ -39,6 +42,8 @@
 /* Begin PBXFileReference section */
 		EE491B6E240022950009EA18 /* GHConnecter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHConnecter.swift; sourceTree = "<group>"; };
 		EE491B7024002A750009EA18 /* TypeDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeDefine.swift; sourceTree = "<group>"; };
+		EE491B722401237A0009EA18 /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
+		EEDFC96124019F34000A1D86 /* ViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
 		EEE8B51F23FF92E8001DD3B5 /* GUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEE8B52223FF92E8001DD3B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEE8B52423FF92E8001DD3B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EECFC9E92402C6CB00F8CDD5 /* JGProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +113,9 @@
 			children = (
 				EEE8B52223FF92E8001DD3B5 /* AppDelegate.swift */,
 				EEE8B52423FF92E8001DD3B5 /* SceneDelegate.swift */,
+				EEDFC96124019F34000A1D86 /* ViewCell.swift */,
 				EEE8B52623FF92E8001DD3B5 /* ViewController.swift */,
+				EE491B722401237A0009EA18 /* ViewControllerModel.swift */,
 				EEE8B52823FF92E8001DD3B5 /* Main.storyboard */,
 				EEE8B52B23FF92EB001DD3B5 /* Assets.xcassets */,
 				EEE8B52D23FF92EB001DD3B5 /* LaunchScreen.storyboard */,
@@ -152,6 +160,9 @@
 			dependencies = (
 			);
 			name = GUser;
+			packageProductDependencies = (
+				EECFC9E82402C6CB00F8CDD5 /* JGProgressHUD */,
+			);
 			productName = GUser;
 			productReference = EEE8B51F23FF92E8001DD3B5 /* GUser.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +235,9 @@
 				Base,
 			);
 			mainGroup = EEE8B51623FF92E8001DD3B5;
+			packageReferences = (
+				EECFC9E72402C6CB00F8CDD5 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+			);
 			productRefGroup = EEE8B52023FF92E8001DD3B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,7 +283,9 @@
 			files = (
 				EE491B6F240022950009EA18 /* GHConnecter.swift in Sources */,
 				EE491B7124002A750009EA18 /* TypeDefine.swift in Sources */,
+				EE491B732401237A0009EA18 /* ViewControllerModel.swift in Sources */,
 				EEE8B52723FF92E8001DD3B5 /* ViewController.swift in Sources */,
+				EEDFC96224019F34000A1D86 /* ViewCell.swift in Sources */,
 				EEE8B52323FF92E8001DD3B5 /* AppDelegate.swift in Sources */,
 				EEE8B52523FF92E8001DD3B5 /* SceneDelegate.swift in Sources */,
 			);
@@ -600,6 +616,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EECFC9E72402C6CB00F8CDD5 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EECFC9E82402C6CB00F8CDD5 /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EECFC9E72402C6CB00F8CDD5 /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EEE8B51723FF92E8001DD3B5 /* Project object */;
 }
