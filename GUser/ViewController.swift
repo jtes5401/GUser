@@ -28,7 +28,22 @@ class ViewController: UIViewController {
     func onNewData() {
         
     }
-
+}
+extension ViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.userData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let model = viewModel.userData[indexPath.row]
+        if let tCell = cell as? ViewCell {
+            tCell.nameLabel.text = model.name
+            tCell.starImageView.isHidden = !model.isAdmin
+            tCell.picImageView.image = viewModel.userPicDic[model.id]
+        }
+        return cell
+    }
 
 }
 
