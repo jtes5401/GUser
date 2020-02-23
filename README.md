@@ -11,9 +11,10 @@ If user is admin then will show a star on right side.
 ## Design
 
 This app have three main part
-    - ViewController - The UI
-    - ViewControllerModel - logic and ui state
-    - GHConnecter - Github api encapsulation
+
+- ViewController - The UI
+- ViewControllerModel - logic and ui state
+- GHConnecter - Github api encapsulation
 
 Using MVVM and Closure to response 
 
